@@ -25,6 +25,7 @@ import org.jivesoftware.smack.sasl.SASLErrorException;
 import org.jivesoftware.smack.tcp.XMPPTCPConnection;
 import org.jivesoftware.smack.tcp.XMPPTCPConnectionConfiguration;
 import org.jivesoftware.smack.util.XmlStringBuilder;
+import org.jivesoftware.smack.SASLAuthentication;
 
 import android.os.AsyncTask;
 
