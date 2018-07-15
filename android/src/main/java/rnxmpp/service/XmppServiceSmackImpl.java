@@ -68,6 +68,10 @@ public class XmppServiceSmackImpl implements XmppService, ChatManagerListener, S
         String[] serviceNameParts = jidParts[1].split("/");
         String serviceName = serviceNameParts[0];
 
+        SASLAuthentication.unBlacklistSASLMechanism("PLAIN");
+        SASLAuthentication.blacklistSASLMechanism("DIGEST-MD5");
+        SASLAuthentication.blacklistSASLMechanism("SCRAM-SHA-1");
+
         XMPPTCPConnectionConfiguration.Builder confBuilder = XMPPTCPConnectionConfiguration.builder()
                 .setServiceName(serviceName)
                 .setUsernameAndPassword(jidParts[0], password)
